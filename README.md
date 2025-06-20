@@ -4,6 +4,13 @@ This project is a modern e-commerce platform with a Next.js frontend and an Expr
 
 ---
 
+## Tech Stack
+- **Frontend:** Next.js (App Router), React, CSS Modules
+- **Backend:** Node.js, Express.js, CORS
+- **Other:** Fetch API, In-memory data storage
+
+---
+
 ## Features
 - Home page with app info
 - Products page with search/filter and responsive grid
