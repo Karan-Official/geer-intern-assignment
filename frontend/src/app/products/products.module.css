@@ -1,0 +1,206 @@
+.bgWrap {
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow-x: hidden;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%, #c7d2fe 100%);
+  animation: bgMove 12s ease-in-out infinite alternate;
+}
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1rem 2.5rem 1rem;
+}
+.heading {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px #c7d2fe44;
+}
+.subtitle {
+  text-align: center;
+  color: #6366f1;
+  font-size: 1.25rem;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.filtersBlock {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.filtersTitle {
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.5px;
+}
+.filters {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #e0e7ff 0%, #f1f5f9 100%);
+  padding: 1.2rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px #6366f11a;
+}
+.search, .select {
+  padding: 0.8rem 1.4rem;
+  border: 1.5px solid #6366f1;
+  border-radius: 999px;
+  font-size: 1.08rem;
+  outline: none;
+  min-width: 200px;
+  background: #fff;
+  transition: border 0.2s;
+  color: black;
+}
+.pointer {
+  cursor: pointer;
+}
+.search:focus, .select:focus {
+  border: 2px solid #4f46e5;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  animation: fadeIn 1.2s cubic-bezier(.39,.58,.57,1) 0.1s both;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: none; }
+}
+.card {
+  background: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 24px #6366f11a;
+  padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.22s, transform 0.22s, filter 0.22s, border 0.22s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  min-height: 280px;
+  max-width: 300px;
+  width: 100%;
+  border: 1.5px solid #e0e7ff;
+}
+.card:hover {
+  box-shadow: 0 12px 36px #6366f133, 0 2px 8px #6366f122;
+  transform: translateY(-8px) scale(1.03);
+  filter: brightness(1.04) drop-shadow(0 0 12px #6366f133);
+  border: 1.5px solid #6366f1;
+  z-index: 10;
+}
+.cardImageWrap {
+  margin-top: -60px;
+  margin-bottom: 1.2rem;
+  background: #f8fafc;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #6366f11a;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  z-index: 3;
+}
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 1rem;
+  background: #f1f5f9;
+  box-shadow: 0 2px 8px #6366f11a;
+}
+.info {
+  flex: 1;
+  margin-top: 0.5rem;
+  color: #222;
+}
+.name {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+.price {
+  font-size: 1.08rem;
+  color: #137333;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.noResults {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #64748b;
+  font-size: 1.15rem;
+  padding: 2rem 0;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.2rem;
+  }
+  .grid {
+    gap: 1.1rem;
+  }
+  .card {
+    padding: 1.1rem 0.5rem 0.7rem 0.5rem;
+    min-height: 220px;
+    max-width: 95vw;
+  }
+  .filters {
+    padding: 0.7rem 0.3rem;
+  }
+  .cardImageWrap {
+    margin-top: -40px;
+    width: 90px;
+    height: 90px;
+    padding: 0.4rem;
+  }
+  .image {
+    width: 70px;
+    height: 70px;
+  }
+}
+.description {
+  font-size: 0.98rem;
+  color: #555;
+  margin-top: 0.7rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+  min-height: 1.5em;
+}
+.readMore {
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.98rem;
+} 

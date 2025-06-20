@@ -1,0 +1,95 @@
+.container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+  padding: 2.5rem 1rem;
+}
+.card {
+  background: linear-gradient(120deg, #fff 70%, #e0e7ff 100%);
+  border-radius: 2rem;
+  box-shadow: 0 12px 40px #6366f122, 0 2px 8px #6366f111;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 650px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  gap: 2.5rem;
+  position: relative;
+}
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 1.2rem;
+  background: #f1f5f9;
+  box-shadow: 0 2px 12px #6366f11a;
+}
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #4f46e5;
+  margin-bottom: 0.2rem;
+  letter-spacing: -1px;
+}
+.category {
+  font-size: 1.1rem;
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: #e0e7ff;
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  border-radius: 999px;
+  width: fit-content;
+}
+.price {
+  font-size: 1.5rem;
+  color: #16a34a;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.description {
+  font-size: 1.13rem;
+  color: #334155;
+  line-height: 1.6;
+}
+.backLink {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.5rem;
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #e0e7ff;
+  padding: 0.2rem 1rem;
+  border-radius: 999px;
+  transition: background 0.18s;
+}
+.backLink:hover {
+  background: #c7d2fe;
+}
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column;
+    padding: 1.3rem 0.5rem 1.5rem 0.5rem;
+    gap: 1.2rem;
+    max-width: 98vw;
+  }
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+  .name {
+    font-size: 1.3rem;
+  }
+} 
